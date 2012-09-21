@@ -508,12 +508,12 @@ h2.announcements:before {
 
 .ie7 footer, .ie8 footer {
   width: 920px;
-  padding: 40px 0 70px; }
+  padding: 20px 0 70px; }
 
 footer {
   width: 96%;
   max-width: 920px;
-  padding: 40px 2% 70px;
+  padding: 20px 2% 70px;
   margin: 0 auto;
   color: #fff; }
   footer a {
