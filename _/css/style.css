@@ -1,9 +1,3 @@
-.masthead {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c45d17', endColorstr='#a85821',GradientType=0 ); }
-
-.footwrap {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#745099', endColorstr='#55416a',GradientType=0 ); }
-
 /*  Font Awesome
     the iconic font designed for use with Twitter Bootstrap
     -------------------------------------------------------
@@ -253,14 +247,15 @@ a {
   padding: 0 0 5px; }
 
 .masthead {
-  background: #c45d17;
   height: 32px;
-  background: -moz-linear-gradient(top, #c45d17 0%, #b85a1a 80%, #a85821 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c45d17), color-stop(80%, #b85a1a), color-stop(100%, #a85821));
-  background: -webkit-linear-gradient(top, #c45d17 0%, #b85a1a 80%, #a85821 100%);
-  background: -o-linear-gradient(top, #c45d17 0%, #b85a1a 80%, #a85821 100%);
-  background: -ms-linear-gradient(top, #c45d17 0%, #b85a1a 80%, #a85821 100%);
-  background: linear-gradient(to bottom, #c45d17 0%, #b85a1a 80%, #a85821 100%); }
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c45d17), color-stop(1, #a85821));
+  background-image: -webkit-linear-gradient(top, #c45d17, #a85821);
+  background-image: -moz-linear-gradient(top, #c45d17, #a85821);
+  background-image: -ms-linear-gradient(top, #c45d17, #a85821);
+  background-image: -o-linear-gradient(top, #c45d17, #a85821);
+  background-image: linear-gradient(top, bottom, #c45d17, #a85821);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c45d17', endColorstr='#a85821');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#c45d17', endColorstr='#a85821')"; }
 
 .ie7 .logowrapper, .ie8 .logowrapper {
   width: 920px;
@@ -505,13 +500,14 @@ h2.announcements:before {
 
 /* footer */
 .footwrap {
-  background: #745099;
-  background: -moz-linear-gradient(top, #745099 0%, #55416a 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #745099), color-stop(100%, #55416a));
-  background: -webkit-linear-gradient(top, #745099 0%, #55416a 100%);
-  background: -o-linear-gradient(top, #745099 0%, #55416a 100%);
-  background: -ms-linear-gradient(top, #745099 0%, #55416a 100%);
-  background: linear-gradient(to bottom, #745099 0%, #55416a 100%); }
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #745099), color-stop(1, #55416a));
+  background-image: -webkit-linear-gradient(top, #745099, #55416a);
+  background-image: -moz-linear-gradient(top, #745099, #55416a);
+  background-image: -ms-linear-gradient(top, #745099, #55416a);
+  background-image: -o-linear-gradient(top, #745099, #55416a);
+  background-image: linear-gradient(top, bottom, #745099, #55416a);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#745099', endColorstr='#55416a');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#745099', endColorstr='#55416a')"; }
 
 .ie7 footer, .ie8 footer {
   width: 920px;
@@ -637,13 +633,14 @@ ul.primary, ul.tabs {
 ul.primary li a {
   padding: 6px 20px;
   border: 1px solid #333;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #6d6d6d), color-stop(1, #393939));
+  background-image: -webkit-linear-gradient(top, #6d6d6d, #393939);
   background-image: -moz-linear-gradient(top, #6d6d6d, #393939);
   background-image: -ms-linear-gradient(top, #6d6d6d, #393939);
   background-image: -o-linear-gradient(top, #6d6d6d, #393939);
-  background-image: -webkit-gradient(linear, center top, center bottom, from(#6d6d6d), to(#393939));
-  background-image: -webkit-linear-gradient(top, #6d6d6d, #393939);
-  background-image: linear-gradient(top, #6d6d6d, #393939);
-  background-color: #393939;
+  background-image: linear-gradient(top, bottom, #6d6d6d, #393939);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6d6d6d', endColorstr='#393939');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#6d6d6d', endColorstr='#393939')";
   color: #fff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 3px;

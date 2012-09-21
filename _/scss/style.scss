@@ -1,11 +1,11 @@
 // mast gradient
 $mastcolor: #c45d17;
-$mastmedium: #b85a1a;
 $mastdark: #a85821;
 
 // footer gradient
 $footercolor: #745099;
 $footerdark: #55416a;
+
 
 $bordercolor: #83b901;
 $navlinkcolor: #745099;
@@ -20,13 +20,21 @@ $sans: Helmet, Freesans, sans-serif;
 $serif: 'Alegreya', serif;
 
 
-// mastcolor & mastdark
-.masthead{
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c45d17', endColorstr='#a85821',GradientType=0 );
-}
-// footercolor & footer dark
-.footwrap{
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#745099', endColorstr='#55416a',GradientType=0 );
+// for gradients
+@mixin linear-gradient($from, $to, $ie: $useIEFilters) {
+  @if $ie != 1 { background-color: $to; }
+  
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $from),color-stop(1, $to));
+  background-image: -webkit-linear-gradient(top, $from, $to);
+  background-image: -moz-linear-gradient(top, $from, $to);
+  background-image: -ms-linear-gradient(top, $from, $to);
+  background-image: -o-linear-gradient(top, $from, $to);
+  background-image: linear-gradient(top, bottom, $from, $to);
+
+  @if $ie == 1 { 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+    -ms-filter: quote(progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}'));
+  }
 }
 
 
@@ -215,14 +223,9 @@ a {
 	padding:0 0 5px;
 }
 .masthead{
-	background:$mastcolor;
 	height:32px;
-	background: -moz-linear-gradient(top, $mastcolor 0%, $mastmedium 80%, $mastdark 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$mastcolor), color-stop(80%,$mastmedium), color-stop(100%,$mastdark));
-	background: -webkit-linear-gradient(top, $mastcolor 0%,$mastmedium 80%,$mastdark 100%);
-	background: -o-linear-gradient(top, $mastcolor 0%,$mastmedium 80%,$mastdark 100%);
-	background: -ms-linear-gradient(top, $mastcolor 0%,$mastmedium 80%,$mastdark 100%);
-	background: linear-gradient(to bottom, $mastcolor 0%,$mastmedium 80%,$mastdark 100%);
+
+	@include linear-gradient($mastcolor, $mastdark, 1);
 }
 
 .ie7 .logowrapper, .ie8 .logowrapper{
@@ -521,13 +524,9 @@ h2.announcements:before{
 
 /* footer */
 .footwrap{
-	background: $footercolor;
-	background: -moz-linear-gradient(top,  $footercolor 0%, $footerdark 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$footercolor), color-stop(100%,$footerdark));
-	background: -webkit-linear-gradient(top,  $footercolor 0%,$footerdark 100%);
-	background: -o-linear-gradient(top,  $footercolor 0%,$footerdark 100%);
-	background: -ms-linear-gradient(top,  $footercolor 0%,$footerdark 100%);
-	background: linear-gradient(to bottom,  $footercolor 0%,$footerdark 100%);
+
+	@include linear-gradient($footercolor, $footerdark, 1)
+
 }
 
 
@@ -669,13 +668,9 @@ ul.primary, ul.tabs{
 ul.primary li a{
 	padding:6px 20px;
 	border:1px solid #333;
-	background-image: -moz-linear-gradient(top, #6d6d6d, #393939);
-	background-image: -ms-linear-gradient(top, #6d6d6d, #393939);
-	background-image: -o-linear-gradient(top, #6d6d6d, #393939);
-	background-image: -webkit-gradient(linear, center top, center bottom, from(#6d6d6d), to(#393939));
-	background-image: -webkit-linear-gradient(top, #6d6d6d, #393939);
-	background-image: linear-gradient(top, #6d6d6d, #393939);
-	background-color:#393939;
+
+	@include linear-gradient(#6d6d6d, #393939, 1);
+
 	color:#fff;
 	text-shadow: 1px 1px 3px rgba(0,0,0,.5);
   -webkit-border-radius: 3px;
