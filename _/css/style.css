@@ -393,12 +393,9 @@ header {
   width: 100%;
   border-top: 4px solid #83b901;
   border-bottom: 1px solid #83b901;
-  -webkit-border-top-left-radius: 4px;
-  -webkit-border-top-right-radius: 4px;
-  -moz-border-radius-topleft: 4px;
-  -moz-border-radius-topright: 4px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box; }
@@ -643,6 +640,7 @@ ul.primary li a {
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#6d6d6d', endColorstr='#393939')";
   color: #fff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -moz-background-clip: padding;

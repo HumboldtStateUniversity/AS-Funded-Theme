@@ -20,7 +20,7 @@ $sans: Helmet, Freesans, sans-serif;
 $serif: 'Alegreya', serif;
 
 
-// for gradients
+
 @mixin linear-gradient($from, $to, $ie: $useIEFilters) {
   @if $ie != 1 { background-color: $to; }
   
@@ -37,6 +37,15 @@ $serif: 'Alegreya', serif;
   }
 }
 
+// topleft, topright, bottomright, bottomleft
+@mixin border-radius ($values) {
+     -moz-border-radius: $values;
+  -webkit-border-radius: $values;
+          border-radius: $values;
+             -moz-background-clip: padding; 
+          -webkit-background-clip: padding-box; 
+                  background-clip: padding-box;
+}
 
 
 /*  Font Awesome
@@ -224,7 +233,6 @@ a {
 }
 .masthead{
 	height:32px;
-
 	@include linear-gradient($mastcolor, $mastdark, 1);
 }
 
@@ -396,14 +404,7 @@ header{
 	width:100%;
 	border-top:4px solid $bordercolor;
 	border-bottom:1px solid $bordercolor;
-
-	-webkit-border-top-left-radius: 4px;
-	-webkit-border-top-right-radius: 4px;
-	-moz-border-radius-topleft: 4px;
-	-moz-border-radius-topright: 4px;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+	@include border-radius(4px 4px 0 0);
 }
 
 .primary-content{
@@ -524,9 +525,7 @@ h2.announcements:before{
 
 /* footer */
 .footwrap{
-
 	@include linear-gradient($footercolor, $footerdark, 1)
-
 }
 
 
@@ -673,9 +672,8 @@ ul.primary li a{
 
 	color:#fff;
 	text-shadow: 1px 1px 3px rgba(0,0,0,.5);
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+
+	@include border-radius(3px);
 }
 ul.primary li a:hover, ul.primary li.active a:hover, #main ul.primary li.active a{
 	background-image:none;
