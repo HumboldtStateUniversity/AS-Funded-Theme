@@ -744,6 +744,9 @@ li.comment-reply:before {
   position: relative;
   top: -25px; }
 
+.page-contact input[type="text"] {
+  width: 100%; }
+
 .tinynav {
   display: none; }
 
