@@ -4,7 +4,7 @@
 	# loading external stylesheet
 
 	function astemplate_preprocess_html(&$variables) {
-		drupal_add_css('http://fonts.googleapis.com/css?family=Alegreya:400,700', array('type' => 'external'));
+		drupal_add_css('//fonts.googleapis.com/css?family=Alegreya:400,700', array('type' => 'external'));
 	}
 
 
