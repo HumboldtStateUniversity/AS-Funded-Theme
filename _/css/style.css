@@ -326,7 +326,7 @@ header {
         color: #5c8c48;
         font-weight: bold; }
       .main nav ul ul a.active:before {
-        color: #83b901;
+        color: #4086a2;
         content: "\f0da";
         /*caret*/
         font-family: FontAwesome;
@@ -391,8 +391,8 @@ header {
   background: url(../img/navbg.png) repeat-y white;
   background-size: 27%;
   width: 100%;
-  border-top: 4px solid #83b901;
-  border-bottom: 1px solid #83b901;
+  border-top: 4px solid #4086a2;
+  border-bottom: 1px solid #4086a2;
   -moz-border-radius: 4px 4px 0 0;
   -webkit-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
@@ -443,7 +443,7 @@ header {
   .view-announcements li {
     margin: 15px 0 15px 25px; }
   .view-announcements li:before {
-    color: #83b901;
+    color: #4086a2;
     content: "\f0da";
     /*caret*/
     font-family: FontAwesome;
@@ -455,7 +455,7 @@ header {
     text-indent: -17px; }
 
 h2.announcements:before {
-  color: #83b901;
+  color: #4086a2;
   content: "\f0a1";
   font-family: FontAwesome;
   font-weight: normal;
@@ -471,7 +471,7 @@ h2.announcements:before {
   line-height: 18px;
   padding-right: 3%; }
   #block-views-events-block h2:before {
-    color: #83b901;
+    color: #4086a2;
     content: "\f073";
     font-family: FontAwesome;
     font-weight: normal;
@@ -485,7 +485,7 @@ h2.announcements:before {
   .event span {
     font: small-caps 11px/15px Helmet, Freesans, sans-serif;
     text-transform: uppercase;
-    color: #638b01;
+    color: #336b81;
     width: 19%;
     float: left; }
   .event p {
@@ -494,6 +494,14 @@ h2.announcements:before {
     margin: 0;
     position: relative;
     top: -1px; }
+
+/* interior only */
+.region-sidebar-first {
+  float: right;
+  margin: 0 0 20px 20px;
+  padding: 0 0 10px 25px;
+  width: 230px;
+  border-left: 3px solid #8fbfd3; }
 
 /* footer */
 .footwrap {
@@ -758,6 +766,14 @@ li.leaf, li.collapsed, li.expanded {
   padding: 0; }
 
 @media only screen and (max-width: 650px) {
+  .region-sidebar-first {
+    float: none;
+    width: auto;
+    padding: 0 0 12px;
+    margin: 0;
+    border: 0;
+    border-bottom: 3px solid #8fbfd3; }
+
   .tinynav {
     display: block;
     width: 100%; }

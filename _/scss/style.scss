@@ -7,7 +7,7 @@ $footercolor: #745099;
 $footerdark: #55416a;
 
 
-$bordercolor: #83b901;
+$bordercolor: #4086a2;
 $navlinkcolor: #745099;
 $linkcolor:#5c8c48;
 $linkhover:#005696;
@@ -522,6 +522,15 @@ h2.announcements:before{
 	}
 }
 
+/* interior only */
+.region-sidebar-first{
+  float:right;
+  margin:0 0 20px 20px;
+  padding:0 0 10px 25px;
+  width:230px;
+  border-left:3px solid lighten($bordercolor, 25%);
+}
+
 
 /* footer */
 .footwrap{
@@ -772,6 +781,8 @@ li.comment-reply:before{ content: "\f045"; }/*boxarrow*/
 li.leaf, li.collapsed, li.expanded{list-style-image:none;list-style:none;margin:0;padding:0;}
 
 @media only screen and (max-width: 650px) {
+  .region-sidebar-first{
+    float:none; width: auto; padding: 0 0 12px; margin:0; border:0; border-bottom:3px solid lighten($bordercolor, 25%);}
 	.tinynav { display: block; width:100%; }
 	.logo{width:auto;}
 	.main nav {max-width:92%;width:92%;float:none;padding:0 4%;margin:25px 0;}

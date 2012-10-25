@@ -15,6 +15,7 @@ regions[home_photo] = Homepage Photo & Statement
 regions[footer_firstcolumn] = Footer - Column 1
 regions[footer_secondcolumn] = Footer - Column 2
 regions[help] = Help
+regions[sidebar_first] = Right inset
 
 ; Required Regions
 regions[content] = Content
